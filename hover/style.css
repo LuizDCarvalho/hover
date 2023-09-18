@@ -1,0 +1,56 @@
+* {
+    background-color: rgb(12, 226, 55);
+}
+
+h1 {
+    text-align: center;
+    justify-content: center;
+
+}
+
+div {
+    overflow: hidden;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 56vh;
+    animation: float 2s ease-out infinite;
+    transform: translateX(0px);
+}
+
+img {
+    width: 500px;
+    transition: ease-in-out 0.5s;
+    align-items: center;
+    justify-content: center;
+}
+
+div:hover img {
+    transform: scale(1.3);
+}
+
+.face {
+    animation: rotateHue 1s alternate infinite;
+}
+
+@keyframes rotateHue {
+    to {
+        filter: hue-rotate(1turn);
+    }
+}
+
+
+@keyframes float {
+    0%{
+    transform:translateY(0px)
+   }
+   50%{
+    transform: translateY(-60px);
+   }
+   100%{
+    transform: translateY(0px);
+   }
+}
